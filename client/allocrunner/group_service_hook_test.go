@@ -284,6 +284,6 @@ func TestGroupServiceHook_getWorkloadServices(t *testing.T) {
 		logger:            logger,
 	})
 
-	services := h.getWorkloadServices()
+	services := h.getWorkloadServicesLocked()
 	require.Len(t, services.Services, 1)
 }
